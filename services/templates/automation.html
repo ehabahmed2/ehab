@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<style>
+    /* Container styling */
+    .container {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        font-family: var(--font-primary);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+    }
+    .buttons{
+        width: 60%;
+        max-width: 600px;
+    }
+    .primary-btn{
+        width: 100%;
+    }
+
+    /* Headings */
+    h1, h2 {
+        font-size: var(--font-size-large);
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    p {
+        font-size: var(--font-size-medium);
+        color: var(--muted-text-color);
+        line-height: 1.6;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Requirements card styling */
+    .requirements {
+        background-color: var(--card-background);
+        padding: 15px;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .requirements ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .requirements li {
+        font-size: var(--font-size-medium);
+        margin: 10px 0;
+        width: 60%;
+        color: var(--text-color);
+    }
+
+    /* Hero image styling */
+    .hero-image img {
+        border-radius: 50%;
+        border: 5px solid white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 30px;
+    }
+
+
+
+
+    /* Modern list styling */
+    .features-list, .benefits-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .features-list li, .benefits-list li {
+        background-color: var(--card-background);
+        color: var(--text-color);
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .features-list li:hover, .benefits-list li:hover {
+        transform: scale(1.3);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+<header>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Automation Bots & Data Analysis</h1>
+            <p class="subtitle">Still doing things manually? really!</p>
+            <p>We develop automation bots and provide data analysis services to streamline your workflows and gain insights from your data.</p>
+        </div>
+
+        <!-- Profile Image -->
+        <div class="hero-image">
+            <img src="{% static 'pics/image of me.png' %}" alt="image">
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <h2>How It Works</h2>
+    <p>Our services include creating automation scripts using Python to handle repetitive tasks and performing data analysis using libraries like Pandas</p>
+    
+    <h2>Requirements</h2>
+    <div class="features-list">
+        <ul>
+            <li>Task details</li>
+            <li>Data sources</li>
+            <li>Desired outcomes</li>
+        </ul>
+    </div>
+</div>
+{% endblock content %}

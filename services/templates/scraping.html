@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<style>
+    /* Container styling */
+    .container {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        font-family: var(--font-primary);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+    }
+    .buttons{
+        width: 60%;
+        max-width: 600px;
+    }
+    .primary-btn{
+        width: 100%;
+    }
+
+    /* Headings */
+    h1, h2 {
+        font-size: var(--font-size-large);
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    p {
+        font-size: var(--font-size-medium);
+        color: var(--muted-text-color);
+        line-height: 1.6;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Requirements card styling */
+    .requirements {
+        background-color: var(--card-background);
+        padding: 15px;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .requirements ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .requirements li {
+        font-size: var(--font-size-medium);
+        margin: 10px 0;
+        color: var(--text-color);
+    }
+
+    /* Hero image styling */
+    .hero-image img {
+        border-radius: 50%;
+        border: 5px solid white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 30px;
+    }
+
+
+
+
+    /* Modern list styling */
+    .features-list, .benefits-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .features-list li, .benefits-list li {
+        background-color: var(--card-background);
+        color: var(--text-color);
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .features-list li:hover, .benefits-list li:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+<header>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Web Scraping Services</h1>
+            <p class="subtitle">Get info, data, and more...</p>
+            <p>We provide robust web scraping solutions to extract valuable data from websites efficiently and accurately. Whether you need data for analysis, market research, or automation, we've got you covered.</p>
+        </div>
+
+        <!-- Profile Image -->
+        <div class="hero-image">
+            <img src="{% static 'pics/image of me.png' %}" alt="Profile of Ehab">
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <h2>How Our Web Scraping Works</h2>
+    <p>Our web scraping services utilize advanced Python libraries such as <strong>Selenium</strong> and <strong>BeautifulSoup</strong> to navigate and extract structured data from web pages. We can handle various types of websites, including dynamic pages, paginated content, and even data behind login forms.</p>
+    <p>Here are some of the key benefits of our service:</p>
+    <ul class="benefits-list">
+        <li>Custom scraping solutions tailored to your needs.</li>
+        <li>Real-time data extraction with scheduled scrapes.</li>
+        <li>Delivery of data in your preferred format (Excel, CSV, JSON).</li>
+    </ul>
+
+    <h2>Additional Features</h2>
+    <ul class="features-list">
+        {% comment %} <li><strong>API Integration:</strong> Easily integrate the scraped data into your existing systems.</li> {% endcomment %}
+        <li><strong>Data Cleaning:</strong> Ensure the data is clean and ready for analysis.</li>
+        <li><strong>Custom Reports:</strong> Generate custom reports based on the extracted data.</li>
+    </ul>
+
+    <div class="buttons">
+        <button class="primary-btn"><a href="{% url 'contact_form' %}">Get in touch</a></button>
+    </div> 
+</div>
+{% endblock content %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+
+    .card-coming-soon {
+        background-color: var(--card-background);
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-coming-soon h1 {
+        font-family: var(--font-secondary);
+        font-size: var(--font-size-large);
+        margin-bottom: 1rem;
+    }
+
+    .card-coming-soon p {
+        font-size: var(--font-size-medium);
+        margin-bottom: 2rem;
+    }
+
+    .card-coming-soon .btn {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-size: var(--font-size-medium);
+        transition: background-color var(--transition-speed);
+    }
+
+    .card-coming-soon .btn:hover {
+        background-color: var(--hover-color);
+    }
+</style>
+<div class="container-coming-soon">
+    <div class="card-coming-soon">
+        <h1>Coming Soon!</h1>
+        <p>This project/service is currently under development and will be available soon. Stay tuned!</p>
+        <a href="{% url 'home' %}" class="btn">Return Home</a>
+    </div>
+</div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    .container {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        font-family: var(--font-primary);
+        padding: 20px;
+        border-radius: var(--border-radius);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+    h1 {
+        font-size: var(--font-size-large);
+        color: var(--primary-color);
+        text-align: center;
+    }
+    p {
+        font-size: var(--font-size-medium);
+        color: var(--muted-text-color);
+        text-align: center;
+    }
+    .form-group {
+        width: 100%;
+        max-width: 700px;
+        margin-bottom: 15px;
+    }
+    label {
+        display: block;
+        font-size: var(--font-size-medium);
+        color: var(--text-color);
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: var(--font-size-medium);
+        color: var(--text-color);
+        background-color: var(--accent-color);
+        border: 1px solid var(--secondary-color);
+        border-radius: var(--border-radius);
+        transition: border-color var(--transition-speed);
+        text-align: center;
+    }
+    input:focus, textarea:focus {
+        border-color: var(--hover-color);
+        outline: none;
+    }
+    button {
+        background-color: var(--primary-color);
+        color: var(--background-color);
+        padding: 10px 20px;
+        font-size: var(--font-size-medium);
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: background-color var(--transition-speed);
+        width: 100%;
+        max-width: 500px;
+    }
+    button:hover {
+        background-color: var(--hover-color);
+    }
+</style>
+
+<div class="container">
+    <h1>Contact Us</h1>
+    <p>If you have any questions or need further information, please fill out the form below and we will get back to you as soon as possible.</p>
+    <form action="contact_form" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="topic">Topic</label>
+            <input type="text" id="topic" name="topic" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+{% endblock content %}

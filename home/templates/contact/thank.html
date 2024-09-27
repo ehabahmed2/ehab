@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+    <style>
+
+        .container-thank {
+            margin-top: 70px;
+            margin-bottom: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        .card-thank {
+            background-color: var(--card-background);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-thank h1 {
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-large);
+            margin-bottom: 1rem;
+        }
+
+        .card-thank p {
+            font-size: var(--font-size-medium);
+            margin-bottom: 2rem;
+        }
+
+        .card-thank .btn {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-size: var(--font-size-medium);
+            transition: background-color var(--transition-speed);
+        }
+
+        .card-thank .btn:hover {
+            background-color: var(--hover-color);
+        }
+
+        .header-thank {
+            font-family: var(--font-secondary);
+            font-size: var(--font-size-large);
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-thank">
+        <div class="card-thank">
+            <h1 class="header-thank">Thank You {{name}}!</h1>
+            <p>We have received your message and will get in touch with you soon.</p>
+            <a href="{% url 'home' %}" class="btn">Return Home</a>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock content %}

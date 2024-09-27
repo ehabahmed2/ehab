@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<style>
+    /* Container styling */
+    .container {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        font-family: var(--font-primary);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+    }
+
+    /* Headings */
+    h1, h2 {
+        font-size: var(--font-size-large);
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    p {
+        font-size: var(--font-size-medium);
+        color: var(--muted-text-color);
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    /* FAQ list styling */
+    .faq-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .faq-list li {
+        background-color: var(--card-background);
+        color: var(--text-color);
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .faq-list li:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .faq-question {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .faq-answer {
+        margin-bottom: 0;
+    }
+</style>
+
+<div class="container">
+    <h1>Frequently Asked Questions</h1>
+    <ul class="faq-list">
+        <li>
+            <div class="faq-question">What is Django used for in backend development?</div>
+            <div class="faq-answer">Django is a high-level Python web framework used for building scalable and secure backend systems. It simplifies the development process by providing built-in features for authentication, database management, and more.</div>
+        </li>
+        <li>
+            <div class="faq-question">What are the benefits of using Django for backend development?</div>
+            <div class="faq-answer">Django offers several benefits, including rapid development, a robust security framework, scalability, and a large community of developers for support.</div>
+        </li>
+        <li>
+            <div class="faq-question">What is web scraping?</div>
+            <div class="faq-answer">Web scraping is a technique used to extract data from websites. It involves using automated scripts to collect and process data from web pages.</div>
+        </li>
+        <li>
+            <div class="faq-question">Is web scraping legal?</div>
+            <div class="faq-answer">Web scraping itself is not illegal, but it must be done in compliance with the terms of service of the target website and relevant laws, such as GDPR.</div>
+        </li>
+        <li>
+            <div class="faq-question">What are the best tools for web scraping?</div>
+            <div class="faq-answer">Some popular web scraping tools include BeautifulSoup, Selenium, and Scrapy. The best tool depends on the specific requirements of the scraping task.</div>
+        </li>
+        <li>
+            <div class="faq-question">How can I avoid being blocked when scraping a website?</div>
+            <div class="faq-answer">To avoid being blocked, you can use techniques such as rotating IP addresses, respecting the website's robots.txt file, and mimicking human behavior.</div>
+        </li>
+        <li>
+            <div class="faq-question">What are automation bots?</div>
+            <div class="faq-answer">Automation bots are scripts or programs designed to perform repetitive tasks automatically. They can be used for various purposes, such as data entry, web scraping, and process automation.</div>
+        </li>
+        <li>
+            <div class="faq-question">How do automation bots help in data analysis?</div>
+            <div class="faq-answer">Automation bots can collect and preprocess large datasets, making it easier to perform data analysis. They can handle tasks such as data cleaning, transformation, and aggregation.</div>
+        </li>
+        <li>
+            <div class="faq-question">What are the requirements for developing automation bots?</div>
+            <div class="faq-answer">To develop automation bots, you need a clear understanding of the tasks to be automated, access to the data sources, and knowledge of programming languages like Python.</div>
+        </li>
+        <li>
+            <div class="faq-question">Can you help with email configuration issues in Django?</div>
+            <div class="faq-answer">Yes, we can assist with configuring email settings in Django, including setting up SMTP servers, handling email templates, and ensuring secure email delivery.</div>
+        </li>
+        <li>
+            <div class="faq-question">How can I turn Python scripts into executable apps?</div>
+            <div class="faq-answer">You can use tools like PyInstaller or cx_Freeze to package Python scripts into standalone executable applications. These tools bundle the script and its dependencies into a single executable file.</div>
+        </li>
+    </ul>
+</div>
+{% endblock content %}

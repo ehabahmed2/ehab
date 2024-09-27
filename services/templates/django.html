@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+<style>
+    /* Styling for the main content container */
+    .container {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        font-family: var(--font-primary);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styling for headings */
+    h1, h2 {
+        font-size: var(--font-size-large);
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    p {
+        font-size: var(--font-size-medium);
+        color: var(--muted-text-color);
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    /* Requirements card styling */
+    .requirements {
+        background-color: var(--card-background);
+        padding: 20px;
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+        margin-top: 20px;
+    }
+
+    .requirements ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .requirements li {
+        font-size: var(--font-size-medium);
+        margin: 10px 0;
+        color: var(--text-color);
+    }
+
+
+
+    /* Styling for profile image */
+    .hero-image img {
+        border-radius: 50%;
+        border: 5px solid white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Modern list styling */
+    .services-list, .benefits-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .services-list li, .benefits-list li {
+        background-color: var(--card-background);
+        color: var(--text-color);
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+        width: 100%;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .services-list li:hover, .benefits-list li:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    .buttons{
+        width: 60%;
+        max-width: 600px;
+    }
+    .primary-btn{
+
+        width: 100%;
+    }
+</style>
+
+<header>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Web Scraping Services</h1>
+            <p class="subtitle">Unlock the power of data with our expert scraping solutions.</p>
+            <p>We provide powerful, tailored web scraping services to extract accurate data from any website efficiently.</p>
+        </div>
+
+        <!-- Profile Image -->
+        <div class="hero-image">
+            <img src="{% static 'pics/image of me.png' %}" alt="Profile of Ehab">
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <h1>Backend Development with Django</h1>
+    <p>
+        We specialize in creating scalable, high-performance backend systems using Django, one of the most reliable Python web frameworks.
+        Whether you're building a complex enterprise application or a simple API, we ensure secure and efficient backend development that meets your needs.
+    </p>
+
+    <h2>Our Services Include:</h2>
+    <ul class="services-list">
+        <li>Building FAST APIs to facilitate communication between frontend and backend systems.</li>
+        <li>Implementing authentication systems for secure user access.</li>
+        <li>Database design and optimization for efficient data storage and retrieval.</li>
+        <li>Integrating third-party services and APIs to extend functionality.</li>
+        <li>Providing ongoing maintenance and support to ensure system reliability.</li>
+    </ul>
+
+    <h2>Benefits of Using Our Services</h2>
+    <ul class="benefits-list">
+        <li>Custom solutions tailored to your specific needs.</li>
+        <li>High-performance systems that scale with your business.</li>
+        <li>Secure and reliable backend infrastructure.</li>
+        <li>Expert support and maintenance services.</li>
+        <li>Seamless integration with existing systems and services.</li>
+    </ul>
+    <!-- Buttons -->
+    <div class="buttons">
+        <button class="primary-btn">
+            <a href="{% url 'contact_form' %}">Get in Touch</a>
+        </button>
+    </div>
+</div>
+{% endblock content %}

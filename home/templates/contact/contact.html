@@ -1,0 +1,37 @@
+<section id="contact">
+    <div class="container">
+    <h2>Contact Me</h2>
+        {% csrf_token %}
+    <form id="contactForm" action="/" method="post">
+        {% csrf_token %}
+        <!-- Name Field -->
+        <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Name">
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="name@example.com">
+        </div>
+
+        
+        <!-- Email Field -->
+        <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required placeholder="Subject">
+        </div>
+    
+
+        <!-- Message Field -->
+        <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+    </div>
+</section>

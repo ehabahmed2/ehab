@@ -1,1 +1,202 @@
-<h1>This is home</h1>
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<header>
+    {% include "nav.html" %}
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>I'm Ehab</h1>
+            <p class="subtitle">Backend Developer & Python Expert <span class="curly-line">✦</span></p>
+            <p>Helping brands stand out with exceptional backend development and automation solutions.</p>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button class="primary-btn"><a href="#contact">Get in touch</a></button>
+                <button class="secondary-btn">My Portfolio</button>
+            </div>
+        </div>
+
+        <!-- Profile Image -->
+        <div class="hero-image">
+            <img src="{% static "pics/image of me.png" %}" alt="Profile of Ehab">
+        </div>
+    </div>
+</header>
+
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a backend developer with over a year of experience in Python, Django, and expertise in web scraping using Selenium and BeautifulSoup. 
+        I also have some experience in frontend development and automation projects, working with APIs and Django.
+    </p>
+</section>
+<section id="skills">
+    <div class="skills-container">
+        <!-- Left: Image -->
+        <div class="skills-image">
+            <img src="{% static "pics/img.jfif" %}" alt="Developer working">
+        </div>
+
+        <!-- Right: Skills Cards -->
+        <div class="skills-content">
+            <h2>My Skills</h2>
+            
+            <div class="skill-card">
+                <h3>Python</h3>
+                <div class="skill-bar" data-skill="95"></div>
+            </div>
+            
+            <div class="skill-card">
+                <h3>Django</h3>
+                <div class="skill-bar" data-skill="90"></div>
+            </div>
+            
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <div class="skill-bar" data-skill="85"></div>
+            </div>
+            
+            <div class="skill-card">
+                <h3>Web Scraping (Selenium & BeautifulSoup)</h3>
+                <div class="skill-bar" data-skill="90"></div>
+            </div>
+            <div class="skill-card">
+                <h3>API Integration</h3>
+                <div class="skill-bar" data-skill="80"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <h5>SERVICES</h5>
+            <h2>What I do for <br>my clients</h2>
+            <p>Providing backend development and data automation solutions with efficient code practices.</p>
+            <div class="image-wrapper">
+                <img src="{% static "pics/image1.jpg" %}" alt="Avatar Image">
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <ul class="services-list">
+                <li>
+                    <span>01</span>
+                    <a href="{% url "scraping" %}">Web Scraping Services
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <span>02</span>
+                    <a href="{% url "django" %}">Backend Development with Django
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <span>03</span>
+                    <a href="{% url "soon" %}">API Development
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <span>04</span>
+                    <a href="{% url "automation" %}">Automation Bots & Data Analysis
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Start of experience section -->
+<section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-container">
+        <div class="job">
+            <h3>Vodafone UK</h3>
+            <p>Worked as a Voice and Chat Agent, assisting customers with inquiries, troubleshooting issues, and providing support to enhance customer satisfaction.</p>
+        </div>
+        <div class="job">
+            <h3>Freelance Services (Self-Services Online)</h3>
+            <p>Provided web scraping, automation tasks, and backend development solutions. Specialized in web scraping using Python and Selenium, and worked on various freelance projects related to automating processes and building efficient data extraction tools.</p>
+        </div>
+    </div>
+</section>
+
+<!-- End of experience section -->
+
+<!-- Start of projects section -->
+<section id="featured-works">
+    <h2>Featured Works</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="{% static 'pics/scraping.jpg' %}" alt="Web Scraping Project">
+            <div class="overlay">
+                <h3>Web Scraping App</h3>
+                <p>Developed a Python-based scraping application to extract item details from websites like Amazon and organize them into a structured format.</p>
+                <a href="{% url "soon" %}">Check it out</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="{% static "pics/onlinestore.jpg" %}" alt="Ecommerce Project">
+            <div class="overlay">
+                <h3>Ecommerce Website</h3>
+                <p>Created a full-featured ecommerce platform with Django, including cart functionality, product management, and payment integration. Plans are in place to transform this project into a social media platform in the near future.</p>
+                <a href="{% url "soon" %}">Check it out</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="{% static "pics/social.png" %}" alt="Social Media Platform Coming Soon">
+            <div class="overlay">
+                <h3>New Social Media Platform</h3>
+                <p>Connecting people and ideas like never before. Stay tuned for a unique social experience that will transform how you interact online!</p>
+                <a href="{% url "soon" %}">Check it out</a>
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <img src="{% static "pics/automation.png" %}" alt="Automation Project">
+            <div class="overlay">
+                <h3>Automation Bots</h3>
+                <p>Built Python bots to automate repetitive tasks, including email notifications and data processing.</p>
+                <a href="{% url "soon" %}">Check it out</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section with personal description -->
+<section id="about">
+    <div class="quote">
+        <blockquote>
+            "Consistency and efficiency define the work I deliver as a backend developer."
+        </blockquote>
+        <p>- Ehab, Backend Developer & Python Expert</p>
+    </div>
+</section>
+
+<!-- Start of contact section  -->
+{% include "contact/contact.html" %}
+{% endblock content %}
