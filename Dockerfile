@@ -1,14 +1,19 @@
 FROM python:3.12.3
 
 # Set the working directory
-WORKDIR /portfolio_mgmnt
+WORKDIR /app
 
-# Copy the requirements file and install dependencies
+# Copy the requirements file
 COPY requirements.txt .
+
+# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application code
+# Copy the entire application code
 COPY . .
 
-# Run the application
+# Collect static files (if necessary)
+RUN python manage.py collectstatic --noinput
+
+# Start the application with gunicorn
 CMD ["gunicorn", "portfolio_mgmnt.wsgi:application", "--bind", "0.0.0.0:8000"]
