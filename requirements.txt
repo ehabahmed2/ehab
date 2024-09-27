@@ -3,7 +3,7 @@ beautifulsoup4==4.12.3
 certifi==2024.7.4
 charset-normalizer==3.3.2
 configparser==7.1.0
-Django==5.1
+Django==4.2.3
 django-grappelli==4.0.1
 django-suit @ https://github.com/darklow/django-suit/tarball/v2#sha256=b40c916de9528ca86bcccd42d1fd54e7773e5071d2bfd9efc576039c1a441c0b
 django-unfold==0.39.0
