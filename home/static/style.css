@@ -416,6 +416,7 @@ nav.overlay-menu ul li a:hover {
 .skill-bar::before {
     content: '';
     position: absolute;
+    left: 0px;
     height: 100%;
     width: var(--skill-fill); /* Adjust this for different skills */
     background-color: var(--primary-color);
@@ -442,6 +443,7 @@ nav.overlay-menu ul li a:hover {
     .skills-image img {
         max-width: 300px; /* Smaller image on mobile */
     }
+
 }
 
 
@@ -499,8 +501,6 @@ nav.overlay-menu ul li a:hover {
 
 /* ************* Services Section ***************** */
 
-/* ************* Start Services Section ***************** */
-/* ************* Start Services Section ***************** */
 
 #services {
     display: flex;
@@ -627,11 +627,13 @@ nav.overlay-menu ul li a:hover {
 
     #services .left-column {
         text-align: center;
-        max-width: 100%; /* Ensures full-width on smaller screens */
+        max-width: 100%;
+        padding-right: 0px;
     }
 
     #services .right-column {
         margin-top: 30px;
+
     }
 
     #services .services-list li span {
@@ -922,6 +924,7 @@ footer {
         align-items: center;
     }
 
+
     .skills-content,
     .left-column,
     .right-column,
@@ -930,6 +933,8 @@ footer {
         text-align: center;
     }
 
+
+    
     .projects-grid {
         grid-template-columns: 1fr;
     }

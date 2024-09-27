@@ -2,7 +2,23 @@
 {% load static %}
 
 {% block content %}
+<style>
+    .skill-bar::before {
+        left: 0px;
+    }
 
+    @media (max-width: 768px) {
+        #services .left-column {
+            padding-right: 0px;
+        }
+        .project-card .overlay p {
+            font-size: 0.8em;
+        }
+        .project-card .overlay h3 {
+            font-size: 1.2em;
+        }
+    }
+</style>
 <header>
     {% include "nav.html" %}
     <!-- Hero Section -->
