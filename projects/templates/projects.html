@@ -1,1 +1,144 @@
-<h1> Projects </h1>
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+<style>
+    .projects-container {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        font-family: var(--font-primary);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card {
+        background-color: var(--card-background);
+        padding: 20px;
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+        margin-top: 20px;
+    }
+
+    .project-card h2 {
+        font-size: var(--font-size-large);
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+
+    .project-card p {
+        font-size: var(--font-size-medium);
+        color: var(--muted-text-color);
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .project-card a {
+        font-size: var(--font-size-medium);
+        color: var(--link-color);
+        text-decoration: none;
+        margin-top: 10px;
+    }
+
+    .project-card a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="projects-container">
+    <h1>My Projects</h1>
+
+    <div class="project-card">
+        <h2>Web Scraping App</h2>
+        <p>
+            A web scraping application that allows users to input a category link or an ASIN to scrape product data from Amazon. Users can specify the number of pages to scrape and stop the process at any time.
+        </p>
+        <p>
+            <strong>Difficulties:</strong> Handling CAPTCHA and dynamic content loading.
+        </p>
+        <p>
+            <strong>Solution:</strong> Implemented headless browsing with Selenium and integrated proxy rotation to bypass CAPTCHA.
+        </p>
+        <a href="{% url "soon" %}" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+        <h2>Online E-commerce Store</h2>
+        <p>
+            Developed a fully functional e-commerce website with features like product listings, shopping cart, and secure checkout.
+        </p>
+        <p>
+            <strong>Difficulties:</strong> Ensuring secure transactions and handling high traffic.
+        </p>
+        <p>
+            <strong>Solution:</strong> Implemented SSL for secure transactions and optimized the backend for performance.
+        </p>
+        <a href="https://github.com/ehabahmed2/E-commerce_website.git" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+        <h2>Kijiji Scraping App</h2>
+        <p>
+            A web scraping tool designed to extract data from Kijiji listings, providing users with detailed information about products and services.
+        </p>
+        <p>
+            <strong>Difficulties:</strong> Navigating through dynamic content and pagination.
+        </p>
+        <p>
+            <strong>Solution:</strong> Used BeautifulSoup and requests to handle dynamic content and implemented pagination handling.
+        </p>
+        <a href="https://github.com/ehabahmed2/Kijiji-scraper.git" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+        <h2>LinkedIn Job Scraper</h2>
+        <p>
+            A tool to scrape job listings from LinkedIn, providing users with up-to-date job opportunities in their field.
+        </p>
+        <p>
+            <strong>Difficulties:</strong> Dealing with LinkedIn's anti-scraping measures.
+        </p>
+        <p>
+            <strong>Solution:</strong> Implemented rotating user agents and proxy servers to avoid detection.
+        </p>
+        <a href="https://github.com/ehabahmed2/linkedin_job_scraper.git" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+        <h2>Python Problem Solving Projects</h2>
+        <p>
+            A collection of simple Python projects aimed at solving various problems and challenges.
+        </p>
+        <p>
+            <strong>Difficulties:</strong> Optimizing algorithms for better performance.
+        </p>
+        <p>
+            <strong>Solution:</strong> Applied various algorithmic techniques and data structures to improve efficiency.
+        </p>
+        <a href="https://github.com/ehabahmed2/Python-projects" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+        <h2>Upcoming Social Media Platform</h2>
+        <p>
+            Currently working on a unique social media platform with innovative features that set it apart from existing platforms.
+        </p>
+        <p>
+            <strong>Difficulties:</strong> Ensuring scalability and user engagement.
+        </p>
+        <p>
+            <strong>Solution:</strong> Planning to use microservices architecture and implement engaging user features.
+        </p>
+        <a href="{% url "soon" %}" target="_blank">View on GitHub</a>
+    </div>
+</div>
+{% endblock %}
