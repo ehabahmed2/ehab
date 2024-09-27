@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from portfolio_mgmnt import settings
-
+import traceback
 def home(request):
     if request.method == 'POST':
         name = request.POST['name']
@@ -25,12 +25,13 @@ def home(request):
             print(f'Error receiving an email: {e}')
     return render(request, 'home.html', {})
 
+
 def contact(request):
     if request.method == 'POST':
-        name = request.POST['name']
-        subject = request.POST['subject']
-        email = request.POST['email']
-        msg = request.POST['message']
+        name = request.POST.get('name')
+        subject = request.POST.get('subject')
+        email = request.POST.get('email')
+        msg = request.POST.get('message')
         
         # Construct the full message to include the sender's details
         full_message = f"Message from {name} ({email}):\n\n{msg}"
@@ -42,10 +43,10 @@ def contact(request):
                 settings.EMAIL_HOST_USER,  # Your email address (the sender)
                 [settings.EMAIL_HOST_USER],  # Your email address (the recipient)
             )
-            return render(request, 'contact/thank.html', {'name':name})
+            return render(request, 'contact/thank.html', {'name': name})
         except Exception as e:
-            
             print(f'Error receiving an email: {e}')
+            traceback.print_exc()  # Print the full stack trace
     return render(request, 'contact/contact_form.html', {})
 
 def questions(request):
