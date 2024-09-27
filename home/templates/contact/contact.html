@@ -2,7 +2,7 @@
     <div class="container">
     <h2>Contact Me</h2>
         {% csrf_token %}
-    <form id="contactForm" action="/" method="post">
+    <form id="contactForm" action="{% url "home" %}" method="post">
         {% csrf_token %}
         <!-- Name Field -->
         <div class="form-group">
