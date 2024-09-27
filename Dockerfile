@@ -12,6 +12,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the entire application code
 COPY . .
 
+# Set environment variable for Django settings module
+ENV DJANGO_SETTINGS_MODULE=portfolio_mgmnt.settings
+
 # Collect static files (if necessary)
 RUN python manage.py collectstatic --noinput
 
