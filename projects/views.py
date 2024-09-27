@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from .models import Project
 
 def soon(request):
     return render(request, 'soon.html', {})
 
 def projects(request):
-    return render(request, 'projects.html', {})
+    projects = Project.objects.all()
+    return render(request, 'projects.html', {'projects': projects})
