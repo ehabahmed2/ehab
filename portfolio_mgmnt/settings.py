@@ -160,3 +160,11 @@ EMAIL_PORT = 587
 
 
 
+
+
+
+# Ensure these settings are added or updated
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_HTTPONLY = True
+CSRF_COOKIE_HTTPONLY = True

@@ -12,13 +12,7 @@
         <link rel="stylesheet" href="{% static 'style.css' %}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="icon" href="{% static 'favicon.ico' %}">
-        <!-- Security headers -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
-        <meta http-equiv="Strict-Transport-Security" content="max-age=63072000; includeSubDomains; preload">
-        <meta name="referrer" content="no-referrer-when-downgrade">
-        <meta name="X-Content-Type-Options" content="nosniff">
-        <meta name="X-Frame-Options" content="DENY">
-        <meta name="X-XSS-Protection" content="1; mode=block">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
     </head>
     
     <body>
