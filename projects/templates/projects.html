@@ -86,6 +86,9 @@
                 <strong>Solution:</strong> {{ project.solution }}
             </p>
             <a href="{{ project.link }}" target="_blank">View on GitHub</a>
+            {% if project.deployment_link %}
+            <a href="{{ project.deployment_link }}" target="_blank" style="margin-top: 5px;">Check Deployment</a>
+            {% endif %}
         </div>
     {% endfor %}
 </div>
